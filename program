@@ -9,18 +9,20 @@ int main ()
 
 	char cards, repeat = 'N';
 	int number_of_cards;
-	int total_card_value;
+	int total_card_value = 0;
 	int card_value = 0;
+	int card_value1 = 0;
 	int card_hand = 0;
 	int aces = 0;
 	int counter = 0;
 	
+	
 // Ask the user how many cards she or he has:
-	cout << " Welcome to the program blackjack! " << endl;
-	cout << " The program consists of the following: a player receives from two to five cards " << endl;
-	cout << " The face cards- jack, queen, and king are scored as 10 points. The goal is " << endl;
-	cout << " to come as close to a score of 21 as possible without going over 21. " << endl;
-	cout << " How many cards do you have? \n " ;
+	cout << "Welcome to the program blackjack!" << endl;
+	cout << "The program consists of the following: a player receives from two to five cards" << endl;
+	cout << "The face cards- jack, queen, and king are scored as 10 points. The goal is" << endl;
+	cout << "to come as close to a score of 21 as possible without going over 21." << endl;
+	cout << "How many cards do you have? \n " ;
 	cin >> number_of_cards;
 	cout << endl;
 
@@ -40,86 +42,107 @@ switch (cards)
 { 
 
 case '2':
-	card_value += 2;
+	card_value = card_value + 2;
+	card_value1 = card_value + 2;
 	break;
 
 case '3':
-	card_value += 3;
+	card_value = card_value + 3;
+	card_value1 = card_value + 3;
 	break;
 
 case '4':
-	card_value += 4;
+	card_value = card_value + 4;
+	card_value1 = card_value + 4;
 	break;
 
 case '5':
 
-	card_value += 5;
+	card_value = card_value + 5;
+	card_value1 = card_value + 5;
 	break;
 
 case '6':
-	card_value += 6;
+	card_value = card_value + 6;
+	card_value1 = card_value + 6;
 	break;
 
 case '7':
-	card_value += 7;
+	card_value = card_value + 7;
+	card_value1 = card_value + 7;
 	break;
 
 case '8':
-	card_value += 8;
+	card_value = card_value + 8;
+	card_value1 = card_value + 8;
 	break;
 
 
 case '9':
-	card_value += 9;
+	card_value = card_value + 9;
+	card_value1 = card_value + 9;
 	break;
 
 
 case 'T':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'J':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'Q':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'K':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'A':
-	card_value += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 't':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'j':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'q':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'k':
-	card_value  += 10;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
 	break;
 
 case 'a':
-	card_value += 10;
-	break;
+	card_value = card_value + 10;
+	card_value1 = card_value + 10;
+	break;       
+	
 
 // Use a while loop to take care of aces.
 
-	 while (aces > 0) 
+
+ }
+	
+	 { while (aces > 0) 
 
 		{
-
 		if (total_card_value <= 10)
 
 			total_card_value = total_card_value + 11;
@@ -166,11 +189,7 @@ case 'a':
 // While loop to let the user repeat the calculation:
 
 	} while ((repeat == 'Y') || (repeat == 'y')); 
-
-
 }
-
-
 cout << endl;
 return 0;
 }
